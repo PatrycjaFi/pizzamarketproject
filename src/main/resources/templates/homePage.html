@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Market</title>
+
+    <link rel="stylesheet" th:href="@{/css/uikit.min.css}">
+    <link rel="stylesheet" th:href="@{/css/fontawesome.min.css}">
+
+    <script th:src="@{/js/uikit.min.js}"></script>
+    <script th:src="@{/js/uikit-icons.min.js}"></script>
+    <script th:src="@{/js/fontawesome.min.js}"></script>
+</head>
+<body>
+
+<div class="uk-container uk-container-large">
+
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <a th:href="@{/}" class="uk-logo uk-navbar-item"><i class="fa-solid fa-pizza-slice"></i>Pizza</a>
+                <li><a th:href="@{/menu}">Menu</a></li>
+                <li><a th:href="@{/delivery}">Dostawa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="uk-section">
+        <div class="uk-container uk-container-small">
+            <div class="uk-cover-container uk-height-medium uk-margin-small">
+                <img th:src="@{/img/home1.jpg}" alt="Pizza1">
+            </div>
+            <article class="uk-article uk-margin-large uk-text-center">
+                <h1 class="uk-article-title">Pizza neapolitańska</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam at, dolore doloribus dolorum
+                    ea ipsam labore laudantium maxime, modi nihil provident quo saepe sapiente sed sunt veniam, vitae?
+                    Facere? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam aliquid, animi at
+                    aut blanditiis commodi corporis delectus deleniti eligendi excepturi fuga labore nisi nobis nostrum
+                    provident quasi quia, quibusdam ratione recusandae repellendus sequi ut veniam, voluptatibus
+                    voluptatum? Dolorum fuga provident quam. Aut distinctio ex incidunt mollitia non quae tempore?</p>
+                <a class="uk-button uk-button-primary uk-margin-large" th:href="@{/menu}">Sprawdź nasze menu</a>
+            </article>
+            <div class="uk-cover-container uk-height-medium uk-margin-small">
+                <img th:src="@{/img/home2.jpg}" alt="Pizza2">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+
+
+</html>
