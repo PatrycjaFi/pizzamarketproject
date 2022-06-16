@@ -14,7 +14,8 @@
                 <td class="uk-flex uk-flex-column">
                     <div th:text="${pizza.name}"></div>
                     <div class="uk-text-meta">
-                        <span th:each="ingredient, stat : ${pizza.ingredients}" th:text="${ingredient.name} + ${stat.last ? '' : ', '}"></span>
+                        <span th:each="ingredient, stat : ${pizza.ingredients}"
+                              th:text="${ingredient.name} + ${stat.last ? '' : ', '}"></span>
                     </div>
                 </td>
                 <td class="uk-width-1-6">

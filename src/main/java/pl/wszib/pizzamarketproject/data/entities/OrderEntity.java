@@ -1,7 +1,6 @@
 package pl.wszib.pizzamarketproject.data.entities;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "orders")
@@ -16,7 +15,7 @@ public class OrderEntity {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_address_id")
-    private OrderAddressEntity orderAddressEntity;
+    private OrderAddressEntity orderAddress;
 
 
     public Long getId() {
@@ -35,11 +34,11 @@ public class OrderEntity {
         this.pizzaName = pizzaName;
     }
 
-    public OrderAddressEntity getOrderAddressEntity() {
-        return orderAddressEntity;
+    public OrderAddressEntity getOrderAddress() {
+        return orderAddress;
     }
 
-    public void setOrderAddressEntity(OrderAddressEntity orderAddressEntity) {
-        this.orderAddressEntity = orderAddressEntity;
+    public void setOrderAddress(OrderAddressEntity orderAddress) {
+        this.orderAddress = orderAddress;
     }
 }
