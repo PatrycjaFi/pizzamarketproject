@@ -3,12 +3,18 @@ package pl.wszib.pizzamarketproject.web.models;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 public class OrderAddressModel {
+    @Size(min = 2, max = 30)
     private String firstName;
+    @Size(min = 2, max = 30)
     private String lastName;
+    @Size(min = 2, max = 30)
     private String street;
+    @Size(min = 6, max = 6)
     private String postalCode;
+    @Size(min = 2, max = 30)
     private String city;
 
     public String getFirstName() {
