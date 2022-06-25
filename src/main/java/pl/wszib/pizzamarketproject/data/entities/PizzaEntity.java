@@ -20,7 +20,8 @@ public class PizzaEntity {
 
    @ManyToMany
    @JoinTable(name = "pizza_ingredients",
-           joinColumns = @JoinColumn(name = "pizza_id"), inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
+           joinColumns = @JoinColumn(name = "pizza_id"),
+           inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
    private Set<IngredientEntity> ingredients;
 
    public Long getId() {

@@ -8,20 +8,33 @@
 
     <div class="uk-container uk-container-small">
         <h1 class="uk-heading-bullet">Zamówienia</h1>
+
         <table class="uk-table uk-table-striped">
             <tbody>
-
-
             <tr th:each="order : ${orders}">
                 <td class="uk-flex uk-flex-column">
-                    <div th:text="${order.id}"></div>
+
+<!--                    <div th:text="${order.pizzaName}"></div>-->
+<!--                    <div class="uk-text-meta">-->
+<!--                        <span th:each="address, stat : ${order.orderAddress}"-->
+<!--                              th:text="${address.firstName}"></span>-->
+<!--                    </div>-->
+
                     <div class="uk-text-meta">
-                        <span th:each="address, stat : ${order.addresses}"
-                              th:text="${address.id}}"></span>
+                        <span class="uk-text-emphasis"  th:each="address, stat : ${order.orderAddress}"
+                              th:text="|${address.firstName} ${address.lastName}|"></span>
+                        <br>
+                        <span th:each="address, stat : ${order.orderAddress}"
+                              th:text="${address.street}"></span>
+                        <br>
+                        <span th:each="address, stat : ${order.orderAddress}"
+                              th:text="|${address.postalCode} ${address.city}|"></span>
+
                     </div>
                 </td>
-                <td class="uk-width-1-6">
-                    <div class="uk-text-bold uk-margin-small" th:text="${pizza.name}"></div>
+                <td class="uk-width-1-4">
+                    <div class="uk-text-bold uk-margin-small uk-text-right" th:text="${order.pizzaName}"></div>
+
                 </td>
             </tr>
 
